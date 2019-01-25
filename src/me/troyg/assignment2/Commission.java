@@ -2,9 +2,11 @@ package me.troyg.assignment2;
 
 import me.troyg.assignment2.Object.Employee;
 
+import javax.swing.*;
+
 public class Commission implements Payroll {
     private double pay = 0;
-    private double commissionRate = 0;
+    private double commissionRate;
     private double sales;
     private Employee employee = new Employee();
 
@@ -17,7 +19,7 @@ public class Commission implements Payroll {
 
     @Override
     public void setPayPeriodDetails() {
-        sales = 15;
+        sales = Integer.valueOf(JOptionPane.showInputDialog("Enter how many sales there were\n for the current pay period"));
         calculatePay();
     }
 
@@ -29,6 +31,6 @@ public class Commission implements Payroll {
 
     @Override
     public String toString() {
-        return employee.toString() + getClass().getTypeName() + employee.getId() + pay;
+        return employee.toString() + " " + employee.getId() + " " + pay;
     }
 }

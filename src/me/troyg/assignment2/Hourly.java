@@ -2,11 +2,13 @@ package me.troyg.assignment2;
 
 import me.troyg.assignment2.Object.Employee;
 
+import javax.swing.*;
+
 public class Hourly implements Payroll {
 
     Employee employee = new Employee();
     private double hoursWorked = 0;
-    private double rate = 0;
+    private double rate;
     private double pay;
 
     public Hourly(String empNumber, String name, double rate) {
@@ -17,7 +19,7 @@ public class Hourly implements Payroll {
 
     @Override
     public void setPayPeriodDetails() {
-        hoursWorked = 45;
+        hoursWorked = Integer.valueOf(JOptionPane.showInputDialog("Enter how many hours you worked\n in the past two weeks"));
         calculatePay();
     }
 

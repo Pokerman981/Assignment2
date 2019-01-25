@@ -37,6 +37,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + ": " + name;
+        return getClass().getTypeName() + ": " + name;
     }
 }
