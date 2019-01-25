@@ -1,5 +1,7 @@
 package me.troyg.assignment2;
 
+import me.troyg.assignment2.Object.Employee;
+
 public class Commission implements Payroll {
     private double pay = 0;
     private double commissionRate = 0;
@@ -7,7 +9,7 @@ public class Commission implements Payroll {
     private Employee employee = new Employee();
 
     public Commission(String empNumber, String empName, double commissionRate) {
-        employee.setId(empName);
+        employee.setId(empNumber);
         employee.setName(empName);
         this.commissionRate = commissionRate;
 

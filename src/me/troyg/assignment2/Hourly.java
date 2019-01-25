@@ -1,5 +1,7 @@
 package me.troyg.assignment2;
 
+import me.troyg.assignment2.Object.Employee;
+
 public class Hourly implements Payroll {
 
     Employee employee = new Employee();

@@ -1,6 +1,8 @@
 
 package me.troyg.assignment2;
 
+import me.troyg.assignment2.GUI.Assign2Form;
+
 public class Main {
     /**
      * @param args the command line arguments
@@ -32,7 +34,6 @@ public class Main {
             java.util.logging.Logger.getLogger(Assign2Form.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

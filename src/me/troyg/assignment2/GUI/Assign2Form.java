@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package me.troyg.assignment2;
+package me.troyg.assignment2.GUI;
+
+import me.troyg.assignment2.Commission;
+import me.troyg.assignment2.Hourly;
 
 import javax.swing.JOptionPane;
 
