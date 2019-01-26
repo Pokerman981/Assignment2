@@ -4,17 +4,15 @@ import me.troyg.assignment2.Object.Employee;
 
 import javax.swing.*;
 
-public class Commission implements Payroll {
+public class Commission extends Employee implements Payroll {
     private double pay = 0;
     private double commissionRate;
     private double sales;
-    private Employee employee = new Employee();
 
     public Commission(String empNumber, String empName, double commissionRate) {
-        employee.setId(empNumber);
-        employee.setName(empName);
+        this.setId(empNumber);
+        this.setName(empName);
         this.commissionRate = commissionRate;
-
     }
 
     @Override
@@ -31,6 +29,6 @@ public class Commission implements Payroll {
 
     @Override
     public String toString() {
-        return employee.toString() + " " + employee.getId() + " " + pay;
+        return super.toString() + " " + this.getId() + " " + this.pay;
     }
 }

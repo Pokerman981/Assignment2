@@ -4,16 +4,17 @@ import me.troyg.assignment2.Object.Employee;
 
 import javax.swing.*;
 
-public class Hourly implements Payroll {
+public class Hourly extends Employee implements Payroll {
 
-    Employee employee = new Employee();
     private double hoursWorked = 0;
     private double rate;
     private double pay;
 
+
     public Hourly(String empNumber, String name, double rate) {
-        employee.setId(empNumber);
-        employee.setName(name);
+
+        this.setId(empNumber);
+        this.setName(name);
         this.rate = rate;
     }
 
@@ -25,16 +26,19 @@ public class Hourly implements Payroll {
 
     @Override
     public double calculatePay() {
-        if (hoursWorked/2 < 40) {
-            pay = rate * hoursWorked;
+        double overTimeHours;
+        if (hoursWorked/2 > 40) {
+            overTimeHours = (hoursWorked/2) - 40;
+
+            pay = (rate * 40) + (overTimeHours * (rate * 1.5));
         } else {
-            pay = hoursWorked * (rate*1.5);
+            pay = hoursWorked * rate;
         }
         return pay;
     }
 
     @Override
     public String toString() {
-        return employee.toString() + " " + employee.getId() + " " + pay;
+        return super.toString() + " " + this.getId() + " " + this.pay;
     }
 }
