@@ -38,7 +38,7 @@ public class Commission extends Employee implements Payroll {
     //Defining the calculatePay method that is implemented from the Payroll interface
     @Override
     public double calculatePay() { //Calculate the pay on a basic multiplication level
-        pay = sales * commissionRate;
+        pay = (sales * commissionRate)/100;
         return pay;
     }
 
