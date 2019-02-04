@@ -1,8 +1,3 @@
-
-package me.troyg.assignment2;
-
-import me.troyg.assignment2.GUI.Assign2Form;
-
 public class Main {
     /**
      * @param args the command line arguments

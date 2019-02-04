@@ -7,10 +7,6 @@
  * Copyright (c) 2019. All rights reserved
  */
 
-package me.troyg.assignment2;
-
-import me.troyg.assignment2.Object.Employee;
-
 import javax.swing.*;
 
 //Extending and interfacing with Employee and Payroll respectively
